@@ -1,7 +1,7 @@
-FROM python:3.9-slim-buster
+FROM python:3.9-slim
 WORKDIR /app
 RUN pip install flask
-RUN yum install -y nodejs
+FROM alpine:3.19
 RUN npm i -g pm2
 COPY . .
 EXPOSE 5000

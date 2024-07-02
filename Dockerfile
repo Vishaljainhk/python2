@@ -1,7 +1,6 @@
-FROM python:3.9-slim
+FROM python:3.9
 WORKDIR /app
 RUN pip install flask
-FROM node:latest
-RUN npm i -g pm2
 COPY . .
+CMD ["python", "app.py"]
 EXPOSE 5000
